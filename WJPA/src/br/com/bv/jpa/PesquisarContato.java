@@ -20,6 +20,7 @@ public class PesquisarContato {
 		System.out.println("Nome do contato: " + contato.getNome());
 		
 		em.close();
+		emf.close();
 
 	}
 

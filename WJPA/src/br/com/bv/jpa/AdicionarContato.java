@@ -28,6 +28,7 @@ public class AdicionarContato {
 		System.out.println("ID: " + contato.getId());
 		
 		em.close();
+		emf.close();
 
 	}
 

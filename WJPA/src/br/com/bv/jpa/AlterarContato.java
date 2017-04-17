@@ -1,12 +1,14 @@
 package br.com.bv.jpa;
 
+import java.util.Calendar;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.com.bv.model.Contato;
 
-public class RemoverContato {
+public class AlterarContato {
 
 	public static void main(String[] args)
 	{
@@ -14,15 +16,17 @@ public class RemoverContato {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("contatos");
 		EntityManager em = emf.createEntityManager();
 		
+		Contato contato = new Contato();
+		contato.setId(1);
+		contato.setNome("Bruno Alcântara");
+		contato.setData(null);
+		
 		em.getTransaction().begin();
-		// Contato de ID 1 sera removido
-		Contato contato = em.find(Contato.class, 1);
-		em.remove(contato);
+		em.merge(contato);
 		em.getTransaction().commit();
 		
 		em.close();
 		emf.close();
-		
 	}
 
 }
