@@ -2,13 +2,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Home</title>
 </head>
 <body>
-	<c:import url="cabecalho.jsp"></c:import>
+	<c:import url="cabecalho.jsp" />
 	
 	Ola
+	<div>
+		<a href="listagem.jsp">Listar visitantes</a>
+	</div>
 	
-	<c:import url="rodape.jsp"></c:import>
+	<c:import url="rodape.jsp" />
 </body>
 </html>
