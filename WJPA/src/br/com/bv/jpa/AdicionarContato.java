@@ -21,6 +21,7 @@ public class AdicionarContato {
 		EntityManager em = emf.createEntityManager();
 		
 		em.getTransaction().begin();
+		// Contato sera adicionado ao db
 		em.persist(contato);
 		em.getTransaction().commit();
 		

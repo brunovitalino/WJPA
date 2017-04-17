@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 import br.com.bv.model.Contato;
 
-public class PesquisarContato {
+public class RemoverContato {
 
 	public static void main(String[] args)
 	{
@@ -15,12 +15,13 @@ public class PesquisarContato {
 		EntityManager em = emf.createEntityManager();
 		
 		em.getTransaction().begin();
-		// Contato de ID 1 sera pesquisado
+		// Contato de ID 1 sera removido
 		Contato contato = em.find(Contato.class, 1);
-		System.out.println("Nome do contato: " + contato.getNome());
+		em.remove(contato);
+		em.getTransaction().commit();
 		
 		em.close();
-
+		
 	}
 
 }
