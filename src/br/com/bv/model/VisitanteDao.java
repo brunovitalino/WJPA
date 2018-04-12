@@ -16,22 +16,23 @@ public class VisitanteDao
 		PreparedStatement pst = null;
 		Connection conexao = null;
 		ResultSet rs = null;
-		List<Visitante> visitantes = new <Visitante>ArrayList();
-		
-		comandoSQL =	"SELECT * FROM Visitante;";
+		List<Visitante> visitantes = new ArrayList<Visitante>();
+
+//		comandoSQL =	"SELECT * FROM Visitante;";
+		comandoSQL =	"SELECT * FROM cliente;";
 		
 		try
 		{
-			conexao = new ConexaoFactory().getConexao();
+			conexao = new ConexaoFactory().getConexaoSqlServer();
 			pst = conexao.prepareStatement(comandoSQL);
 			rs = pst.executeQuery();
 			while (rs.next())
 			{
 				Visitante visitante = new Visitante();
 				visitante.setNome(rs.getString("nome"));
-				visitante.setTelefone(rs.getString("telefone"));
-				visitante.setEmail(rs.getString("email"));
-				visitante.setMensagem(rs.getString("mensagem"));
+//				visitante.setTelefone(rs.getString("telefone"));
+//				visitante.setEmail(rs.getString("email"));
+//				visitante.setMensagem(rs.getString("mensagem"));
 				visitantes.add(visitante);
 			}
 		}

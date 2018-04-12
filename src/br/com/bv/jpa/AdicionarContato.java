@@ -17,7 +17,7 @@ public class AdicionarContato {
 		contato.setNome("Bruno Vitalino");
 		contato.setData(Calendar.getInstance());
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("contatos");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("db_sqlserver");
 		EntityManager em = emf.createEntityManager();
 		
 		em.getTransaction().begin();

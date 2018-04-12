@@ -12,7 +12,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-//@Table(name="contatos")
+@Table(name="contato")
 //@NamedQuery(name = "todosContatos", query = "SELECT nome FROM Organization nome")
 public class Contato
 {

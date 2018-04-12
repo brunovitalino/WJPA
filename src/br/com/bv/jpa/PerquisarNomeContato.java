@@ -15,7 +15,7 @@ public class PerquisarNomeContato {
 	public static void main(String[] args)
 	{
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("contatos");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("db_sqlserver");
 		EntityManager em = emf.createEntityManager();
 		String comandoJPQL = "";
 		List<Contato> contatos;

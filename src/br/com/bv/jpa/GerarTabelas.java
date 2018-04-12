@@ -7,7 +7,7 @@ public class GerarTabelas {
 
 	public static void main(String[] args)
 	{
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("contatos");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("db_sqlserver");
 		
 		factory.close();
 	}
