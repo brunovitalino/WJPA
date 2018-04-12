@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 //@NamedQuery(name = "todosContatos", query = "SELECT nome FROM Organization nome")
 public class Contato
 {
-	@Column(length=6)
+	@Column
 	@Id
 	@GeneratedValue
 	private int id;

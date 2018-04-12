@@ -1,35 +1,30 @@
-package br.com.bv.jpa;
-
-import java.util.Calendar;
+package br.com.bv.model.jpa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import br.com.bv.model.Contato;
+import br.com.bv.model.Cliente;
 
-public class AdicionarContato {
 
-	public static void main(String[] args)
-	{
-		
-		Contato contato = new Contato();
+public class ClienteJPA {
+	
+	public void createCliente() {
+		Cliente contato = new Cliente();
 		contato.setNome("Bruno Vitalino");
-		contato.setData(Calendar.getInstance());
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("db_sqlserver");
 		EntityManager em = emf.createEntityManager();
 		
 		em.getTransaction().begin();
-		// Contato sera adicionado ao db
+		// Cliente sera adicionado ao db
 		em.persist(contato);
 		em.getTransaction().commit();
 		
-		System.out.println("ID: " + contato.getId());
+		System.err.println("ID: " + contato.getId() + " adicionado.");
 		
 		em.close();
 		emf.close();
-
 	}
 
 }

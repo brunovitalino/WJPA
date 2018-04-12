@@ -5,4 +5,4 @@
  * @author Bruno Vitalino
  *
  */
-package br.com.bv.jpa;
+package br.com.bv.model.jpa;
